@@ -26,6 +26,10 @@ class TestCalculator(unittest.TestCase):
         calc = Calculator()
         result = calc.mod(7, 3)
         self.assertEqual(result, 1)
+    def test_mod_negative(self):
+        calc = Calculator()
+        result = calc.mod(-7, 3)
+        self.assertEqual(result, 2)  # result takes the sign of the divisor
 
 if __name__ == "__main__":
     unittest.main()
