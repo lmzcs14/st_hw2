@@ -10,6 +10,10 @@ class TestCalculator(unittest.TestCase):
         calc = Calculator()
         result = calc.sub(2, 3)
         self.assertEqual(result, -1)  
+    def test_mult(self):
+        calc = Calculator()
+        result = calc.mult(2, 3)
+        selt.assertEqual(result, 6)
 
 if __name__ == "__main__":
     unittest.main()
