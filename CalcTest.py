@@ -13,7 +13,7 @@ class TestCalculator(unittest.TestCase):
     def test_mult(self):
         calc = Calculator()
         result = calc.mult(2, 3)
-        selt.assertEqual(result, 6)
+        self.assertEqual(result, 6)
 
 if __name__ == "__main__":
     unittest.main()
