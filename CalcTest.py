@@ -6,6 +6,10 @@ class TestCalculator(unittest.TestCase):
         calc = Calculator()
         result = calc.add(2, 3)
         self.assertEqual(result, 5)  # Expect 2 + 3 = 5
+    def test_sub(self):
+        calc = Calculator()
+        result = calc.sub(2, 3)
+        self.assertEqual(result, -1)  
 
 if __name__ == "__main__":
     unittest.main()
