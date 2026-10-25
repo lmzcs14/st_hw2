@@ -14,6 +14,10 @@ class TestCalculator(unittest.TestCase):
         calc = Calculator()
         result = calc.mult(2, 3)
         self.assertEqual(result, 6)
+    def test_div(self):
+        calc = Calculator()
+        result = calc.div(3, 2)
+        self.assertEqual(result, 1)
 
 if __name__ == "__main__":
     unittest.main()
