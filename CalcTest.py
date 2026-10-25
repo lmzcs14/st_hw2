@@ -18,6 +18,10 @@ class TestCalculator(unittest.TestCase):
         calc = Calculator()
         result = calc.div(3, 2)
         self.assertEqual(result, 1)
+    def test_div_0(self):
+        calc = Calculator()
+        with self.assertRaises(ZeroDivisionError):
+            calc.div(3, 0)
 
 if __name__ == "__main__":
     unittest.main()
