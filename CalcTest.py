@@ -38,6 +38,10 @@ class TestCalculator(unittest.TestCase):
         calc = Calculator()
         result = calc.power(2, 3)
         self.assertEqual(result, 8)
+    def test_power_0_0(self):
+        calc = Calculator()
+        result = calc.power(0, 0)
+        self.assertEqual(result, 1)  # 0^0 is defined as 1
 
 if __name__ == "__main__":
     unittest.main()
