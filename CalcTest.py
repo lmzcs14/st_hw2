@@ -22,6 +22,10 @@ class TestCalculator(unittest.TestCase):
         calc = Calculator()
         with self.assertRaises(ZeroDivisionError):
             calc.div(3, 0)
+    def test_mod(self):
+        calc = Calculator()
+        result = calc.mod(7, 3)
+        self.assertEqual(result, 1)
 
 if __name__ == "__main__":
     unittest.main()
