@@ -8,4 +8,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python CalcTest.py -v
+      - run: pip install ruff==0.17.2 coverage==7.17.0
+      # Static analysis: fails the build on lint errors
+      - run: ruff check calculator.py CalcTest.py
+      # Tests under coverage: fails if any test fails or coverage of calculator.py drops below 100%
+      - run: coverage run CalcTest.py -v
+      - run: coverage report -m --include=calculator.py --fail-under=100
