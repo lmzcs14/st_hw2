@@ -11,3 +11,5 @@ class Calculator:
         return a % b
     def power(self, a, b):
         return a ** b
+    def negate(self, a): #untested method for q3
+        return -a
